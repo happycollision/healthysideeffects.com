@@ -124,6 +124,15 @@
 
   $form.on('submit', function(e){
     e.preventDefault();
+
+    if (getQ()==='') {
+      $form.find('.message').html('You need to specify a search above.').fadeIn(200);
+      $form.find('#main-query').on('focus', function(){
+        $form.find('.message').fadeOut(200);
+        $form.find('#main-query').off('focus');
+      })
+      return;
+    }
     
     var url = '//yummly.com/recipes?';
     var params = extraParams();
