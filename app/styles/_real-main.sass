@@ -54,14 +54,29 @@ form
   #main-query 
     width: 100%
     background: #fafafa
+
+  fieldset
+    margin: 32px auto
+
+  legend
+    border-color: #333
   
   fieldset label 
     display: block
   
-  fieldset fieldset 
-    display: block
-    float: left
-    width: 50%
+  fieldset#extra-options-fieldset
+    > legend
+      border: none
+      margin: 0 auto
+      cursor: pointer
+      &:hover
+        text-decoration: underline
+    fieldset 
+      margin: 0 auto
+      display: none
+      float: left
+      width: 50%
+      padding: 0 15px
   
   fieldset#day-fieldset 
     border-radius: 6px

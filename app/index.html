@@ -41,7 +41,7 @@
       </fieldset>
       <label for="main-query">What sounds good? <input id="main-query" type="text" value="" placeholder="Ex: chicken salad with nuts"/></label>
       <fieldset id="extra-options-fieldset">
-        <legend>Extra Options</legend>
+        <legend><button type="button">Show Options</button></legend>
         
         <fieldset id="allergies-fieldset">
           <legend>Allergies</legend>
@@ -52,8 +52,10 @@
         </fieldset>
         
       </fieldset>
-      <input type="submit" value="Search" />
-      <label for="open-in-new"><input type="checkbox" id="open-in-new" name="open-in-new" checked /> Open in new window</label>
+      <fieldset>
+        <input type="submit" value="Search" />
+        <label for="open-in-new"><input type="checkbox" id="open-in-new" name="open-in-new" checked /> Open in new window</label>
+      </fieldset>
     </form>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

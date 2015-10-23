@@ -152,4 +152,8 @@
     }
   });
 
+  $form.find('fieldset#extra-options-fieldset').on('click', function(){
+    $(this).find('fieldset').stop().toggle(400);
+  });
+
 }); })(jQuery)
