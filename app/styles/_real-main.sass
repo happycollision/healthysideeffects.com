@@ -8,6 +8,9 @@ $y-blue-dark: #1067D1
 $y-blue-light: #74B3FA
 $y-green: #0BB34D
 $y-green-dark: #023f00
+$y-green-light: #CAF1CC
+
+$body-padding: 12px
 
 body 
   background: #fafafa
@@ -34,11 +37,23 @@ body > *
   max-width: 700px
   margin-left: auto
   margin-right: auto
+  padding-left: $body-padding
+  padding-right: $body-padding
 
 
 form 
+  background: $y-green-light;
+  padding: 0.8rem $body-padding
+
+  &.protein-day
+    background-color: $y-orange-light
+
+  &.carb-day
+    background-color: $y-blue-light
+
   #main-query 
     width: 100%
+    background: #fafafa
   
   fieldset label 
     display: block
@@ -49,7 +64,26 @@ form
     width: 50%
   
   fieldset#day-fieldset 
-    background: $y-orange-dark
-    color: white
+    border-radius: 6px
+    overflow: hidden
+    padding: 0
+    margin: 0.8rem auto
+    text-align: center
 
-  
+    label
+      float:left
+      width: 50%
+      background-color: #ddd
+      color: #999
+      cursor: pointer
+
+
+      input
+        display: none
+
+      &.active
+        color: white
+        &:first-child
+          background-color: $y-blue-dark
+        &:last-child
+          background-color: $y-orange-dark

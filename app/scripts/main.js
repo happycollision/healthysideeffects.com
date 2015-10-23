@@ -139,4 +139,17 @@
     }
   })
 
+  $form.find('fieldset#day-fieldset input').on('change', function(){
+    var $checkboxes = $(this).closest('fieldset').find('input');
+    var $checked = $checkboxes.filter(':checked');
+    var isProteinDay = $checked.val() === 'orange' ? true : false ;
+    $checkboxes.parent().removeClass('active');
+    $checked.parent().addClass('active');
+    if (isProteinDay) {
+      $(this).closest('form').removeClass('carb-day').addClass('protein-day');
+    } else {
+      $(this).closest('form').removeClass('protein-day').addClass('carb-day');
+    }
+  });
+
 }); })(jQuery)
