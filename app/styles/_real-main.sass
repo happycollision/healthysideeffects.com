@@ -48,8 +48,23 @@ form
   &.protein-day
     background-color: $y-orange-light
 
+    button
+      color: $y-orange-dark
+      border-color: $y-orange-dark
+      &:hover
+        color: #fff
+        background-color: $y-orange-dark
+
   &.carb-day
     background-color: $y-blue-light
+
+    button
+      color: $y-blue-dark
+      border-color: $y-blue-dark
+      &:hover
+        color: #fff
+        background-color: $y-blue-dark
+
 
   #main-query 
     width: 100%
@@ -57,6 +72,9 @@ form
 
   fieldset
     margin: 32px auto
+
+    &:last-child
+      margin-bottom: 0
 
   legend
     border-color: #333
@@ -120,6 +138,11 @@ form
     color: white
     display: none
 
-footer
+.disclaimer
+  background: #eee
+  text-align: center
+  padding: 12px
+
+footer, .disclaimer
   color: #777
   font-size: 10px
