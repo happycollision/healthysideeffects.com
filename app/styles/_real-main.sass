@@ -95,16 +95,23 @@ form
       color: #999
       cursor: pointer
 
+      &:hover
+        &:first-child
+          background-color: $y-blue-light
+          color: $y-blue-medium
+        &:last-child
+          background-color: $y-orange-light
+          color: $y-orange-medium
 
-      input
-        display: none
-
-      &.active
+      &.active, &.active:hover
         color: white
         &:first-child
           background-color: $y-blue-dark
         &:last-child
           background-color: $y-orange-dark
+
+      input
+        display: none
 
   .message
     margin-left: 1em
